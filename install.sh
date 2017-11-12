@@ -16,6 +16,9 @@ rm -rf $M || true
 mkdir $M
 
 make install
+cd contrib
+make install
+cd ..
 
 $M/bin/initdb -D $M/data-master
 
